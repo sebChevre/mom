@@ -1,0 +1,5 @@
+New-Item -ItemType Directory 'C:\Distrib\kubemqctl'
+Invoke-WebRequest https://github.com/kubemq-io/kubemqctl/releases/download/latest/kubemqctl.exe -OutFile 'C:\Distrib\kubemqctl\kubemqctl.exe'
+$env:Path += ';C:\Distrib\kubemqctl'
+
+npm i kubemq-restnodejs

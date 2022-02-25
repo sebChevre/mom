@@ -1,0 +1,7 @@
+#apache activemq
+docker run -d -p 61616:61616 -p 8161:8161 -p 61613:61613 rmohr/activemq
+
+#Node js client activemq
+https://github.com/gdaws/node-stomp
+https://medium.com/@mackplevine/using-activemq-with-node-js-stomp-and-http-b251ce8d995
+

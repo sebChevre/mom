@@ -1,0 +1,32 @@
+'use strict';
+require('dotenv').config();
+
+var Stomp = require("stomp-client");
+const port = process.env.ACTIVEMQ_STOMP_PORT
+const host = process.env.ACTIVEMQ_STOMP_HOST
+const user = process.env.ACTIVEMQ_STOMP_USER
+const pass = process.env.ACTIVEMQ_STOMP_PASS
+
+var MessageProducer = function MessageProducer(){
+  this._stompClient = null;
+};
+
+MessageProducer.prototype.init = function init(){
+  this._stompClient = new Stomp(host, port, user, pass);
+  
+  this._stompClient.connect(function(sessionId){
+    console.log(`[PUBLISHER] >> STOMP client connected [${host}:${port}]`);
+  });
+};
+
+MessageProducer.prototype.sendMessage = function sendMessage(messageToPublish, queueToPublish){
+  try{
+    this._stompClient.publish('/queue/' + queueToPublish, messageToPublish);
+    console.log(`[PUBLISHER] >> Message published on queue : ${queueToPublish}, message: ${messageToPublish}]`);
+  }catch (e) {
+    console.log(e)
+  }
+};
+
+module.exports = new MessageProducer();
+

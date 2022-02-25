@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "kubemq-restnodejs": "^1.0.2"
+  }
+}
