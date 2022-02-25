@@ -5,8 +5,6 @@ const hostname = '127.0.0.1';
 const port = 3000;
 var publisher = require('./publisher');
 
-
-
 app.use(express.json())
 
 app.post('/send', (req,res) => {

@@ -4,16 +4,13 @@ const app = express()
 const hostname = '127.0.0.1';
 const port = 3000;
 var publisher = require('./publisher');
-var subscribers = require('./activemqQueueSubscriber')
-let Subscriber = subscribers.ActiveMqQueueSubScriber;
-
 
 app.use(express.json())
 
 app.post('/send', (req,res) => {
     var message = req.body.message
-    var queue = req.body.queue
-    publisher.sendMessage(message,queue)
+    var topic = req.body.topic
+    publisher.sendMessage(message,topic)
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
     res.end('Message send');
@@ -32,7 +29,3 @@ app.listen(port, () => {
   publisher.init()
 })
 
-new Subscriber("test")
-//subscriber.init("test");
-//sub1.ActiveMqQueueSubScriber("test33");
-//subscriber.unsubscribe("test33")
