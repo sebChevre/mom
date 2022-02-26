@@ -18,14 +18,6 @@ app.post('/send', (req,res) => {
     res.end('Message send');
 })
 
-app.post('/subscribe', (req,res) => {
-  var queue = req.body.queue
-  subscriber.init(queue);
-  res.statusCode = 200; 
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Subscriber added');
-})
-
 app.listen(port, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
   publisher.init()

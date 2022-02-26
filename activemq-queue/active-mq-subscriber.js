@@ -25,9 +25,11 @@ if(queueToSubscribe === undefined) {
   process.exit(1)
 }
 
-console.log(`[SUBSCRIBER] >> Subscriber listenning [${host}:${port}] on queue: ${queueToSubscribe}`)
+
 
 stompClient.connect(function(sessionId){
+    console.log(`[SUBSCRIBER] >> Subscriber listenning [${host}:${port}] on queue: ${queueToSubscribe}`)
+
     stompClient.subscribe('/queue/' + queueToSubscribe, function(body, headers){
       console.log(`[SUBSCRIBER] >> Message received [queue:${queueToSubscribe}] - ${body}`)
     })

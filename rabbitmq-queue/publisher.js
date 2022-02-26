@@ -2,10 +2,10 @@
 require('dotenv').config();
 
 var amqp = require('amqplib/callback_api');
-const port = process.env.ACTIVEMQ_STOMP_PORT
-const host = process.env.ACTIVEMQ_STOMP_HOST
-const user = process.env.ACTIVEMQ_STOMP_USER
-const pass = process.env.ACTIVEMQ_STOMP_PASS
+const port = process.env.RABBITMQ_PORT
+const host = process.env.RABBITMQ_HOST
+const user = process.env.RABBITMQ_USER
+const pass = process.env.RABBITMQ_PASS
 
 var MessageProducer = function MessageProducer(){
   this.channel = null;
@@ -13,7 +13,9 @@ var MessageProducer = function MessageProducer(){
 
 MessageProducer.prototype.init = function init(){
   var that = this;
-  amqp.connect('amqp://user:password@localhost', function(error0, connection) {
+  var rabbitMqConnextionString = `amqp://${user}:${pass}@${host}:${port}`;
+
+  amqp.connect(rabbitMqConnextionString, function(error0, connection) {
     if (error0) {
         throw error0;
     }
@@ -22,13 +24,7 @@ MessageProducer.prototype.init = function init(){
             throw error1;
         }
         that.channel = channel
-       // var queue = 'hello';
-       // var msg = 'Hello World!';
-
-        
-        //channel.sendToQueue(queue, Buffer.from(msg));
-
-        //console.log(" [x] Sent %s", msg);
+        console.log(`[PUBLISHER] >> AMQP client connected [${rabbitMqConnextionString}]`);
     });
     
 });
