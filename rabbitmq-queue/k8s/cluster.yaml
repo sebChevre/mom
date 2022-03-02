@@ -3,16 +3,18 @@ kind: RabbitmqCluster
 metadata:
   name: test-rabbitmqcluster
 spec:
+  image: vslharbor.jura.ch/dockerhub/library/rabbitmq:3.9.13-management
   persistence:
     storage: 50Mi
-  replicas: 3
+    storageClassName: rabbitmq-ops
+  replicas: 1
   resources:
     requests:
       cpu: 500m
-      memory: 1Gi
+      memory: 500Mi
     limits:
       cpu: 1
-      memory: 1Gi
+      memory: 500Mi
   rabbitmq:
           additionalConfig: |
                   log.console.level = info
