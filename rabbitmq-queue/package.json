@@ -2,6 +2,7 @@
   "dependencies": {
     "amqplib": "^0.8.0",
     "cli-interact": "^0.1.9",
+    "custom-env": "^2.0.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.3"
   }

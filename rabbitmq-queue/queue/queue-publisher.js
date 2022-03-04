@@ -1,5 +1,6 @@
 'use strict';
-require('dotenv').config();
+require ('custom-env').env('k8s')
+//require('dotenv').config();
 
 var amqp = require('amqplib/callback_api');
 const port = process.env.RABBITMQ_PORT

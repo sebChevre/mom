@@ -37,7 +37,7 @@ MessageProducer.prototype.sendMessage = function sendMessage(messageToPublish, e
       durable: false
   });
 
-  console.log(t)
+ // console.log(t)
     this.channel.publish(exchangeToPublish,'', Buffer.from(messageToPublish));
      console.log(`[PUBLISHER] >> Message published on exchange : ${exchangeToPublish}, message: ${messageToPublish}]`);
   }catch (e) {

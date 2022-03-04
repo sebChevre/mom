@@ -12,10 +12,27 @@ app.use(express.json())
 app.post('/send', (req,res) => {
     var message = req.body.message
     var exchange = req.body.exchange
-    publisher.sendMessage(message,exchange)
+    publisher.sendMessage(`${new Date().toISOString()} - ${message}`,exchange)
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
     res.end('Message send');
+})
+
+app.post('/send/:nb_messages/each/:seconds', (req,res) => {
+  var message = req.body.message
+  var exchange = req.body.exchange
+
+  var iteration = req.params.nb_messages
+  var delay = req.params.seconds
+
+  console.log(`Number of iteration:${iteration}, each:${delay} seconds`)
+ 
+  
+  startMessageLoop(message,exchange, delay, iteration)
+
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Process started');
 })
 
 app.listen(port, () => {
@@ -23,7 +40,18 @@ app.listen(port, () => {
   publisher.init()
 })
 
+function startMessageLoop (message, exchange, delay, iteration) {
+  var loopCount = 0
 
+  loopInterval = setInterval(function timer() {
+    publisher.sendMessage(`${new Date().toISOString()} - ${message}`,exchange)
+    loopCount ++
+    
+    if(loopCount == iteration){
+      clearInterval(loopInterval)
+    }
+  }, delay * 1000);
+}
 
 
 
