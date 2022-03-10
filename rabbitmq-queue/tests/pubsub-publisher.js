@@ -1,6 +1,5 @@
 'use strict';
-require ('custom-env').env('k8s')
-
+require('dotenv').config();
 
 var amqp = require('amqplib/callback_api');
 const port = process.env.RABBITMQ_PORT
@@ -24,22 +23,30 @@ MessageProducer.prototype.init = function init(){
         if (error1) {
             throw error1;
         }
+        
         that.channel = channel
+        
         console.log(`[PUBLISHER] >> AMQP client connected [${rabbitMqConnextionString}]`);
     });
     
 });
 };
 
-MessageProducer.prototype.sendMessage = function sendMessage(messageToPublish, queueToPublish){
+MessageProducer.prototype.sendMessage = function sendMessage(messageToPublish, exchangeToPublish){
   try{
-    this.channel.assertQueue(queueToPublish, {
+    var t = this.channel.assertExchange(exchangeToPublish,"fanout", {
       durable: false
-    });
+  });
 
-    
-    this.channel.sendToQueue(queueToPublish, Buffer.from(messageToPublish));
-     console.log(`[PUBLISHER] >> Message published on queue : ${queueToPublish}, message: ${messageToPublish}]`);
+  this.channel.bindQueue("test.bind", exchangeToPublish, '');
+
+ 
+
+  
+
+ // console.log(t)
+    this.channel.publish(exchangeToPublish,'', Buffer.from(messageToPublish));
+     console.log(`[PUBLISHER] >> Message published on exchange : ${exchangeToPublish}, message: ${messageToPublish}]`);
   }catch (e) {
     console.log(e)
   }

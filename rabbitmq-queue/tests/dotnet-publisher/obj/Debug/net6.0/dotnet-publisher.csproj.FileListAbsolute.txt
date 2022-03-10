@@ -1,0 +1,17 @@
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\bin\Debug\net6.0\dotnet-publisher.exe
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\bin\Debug\net6.0\dotnet-publisher.deps.json
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\bin\Debug\net6.0\dotnet-publisher.runtimeconfig.json
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\bin\Debug\net6.0\dotnet-publisher.dll
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\bin\Debug\net6.0\dotnet-publisher.pdb
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\dotnet-publisher.csproj.AssemblyReference.cache
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\dotnet-publisher.GeneratedMSBuildEditorConfig.editorconfig
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\dotnet-publisher.AssemblyInfoInputs.cache
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\dotnet-publisher.AssemblyInfo.cs
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\dotnet-publisher.csproj.CoreCompileInputs.cache
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\dotnet-publisher.dll
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\refint\dotnet-publisher.dll
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\dotnet-publisher.pdb
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\dotnet-publisher.genruntimeconfig.cache
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\ref\dotnet-publisher.dll
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\bin\Debug\net6.0\RabbitMQ.Client.dll
+D:\MOM\rabbitmq-queue\tests\dotnet-publisher\obj\Debug\net6.0\dotnet-publisher.csproj.CopyComplete

@@ -33,9 +33,11 @@ amqp.connect(rabbitMqConnextionString, function(error0, connection) {
             throw error1;
         }
 
-        channel.assertQueue(queueToSubscribe, {
-            durable: true
-        });
+        /**channel.assertQueue(queueToSubscribe, {
+            durable: true, 
+            "x-queue-type": "quorum" 
+
+        });*/
 
         channel.consume(queueToSubscribe, function(msg) {
             console.log(`[SUBSCRIBER] >> Message received [queue:${queueToSubscribe}] - ${msg.content.toString()}`)

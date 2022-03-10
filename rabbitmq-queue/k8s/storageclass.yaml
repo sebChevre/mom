@@ -6,7 +6,7 @@ provisioner: nfs.csi.k8s.io
 parameters:
   server: 10.28.2.20
   share: /nfs/sandbox
-reclaimPolicy: Delete
+reclaimPolicy: Retain
 mountOptions:
   - hard
   - nfsvers=4.1

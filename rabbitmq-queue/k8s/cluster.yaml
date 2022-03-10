@@ -1,26 +1,28 @@
 apiVersion: rabbitmq.com/v1beta1
 kind: RabbitmqCluster
 metadata:
-  name: test-rabbitmqcluster
+  name: rabbitmqcluster
 spec:
   image: vslharbor.jura.ch/dockerhub/library/rabbitmq:3.9.13-management
   persistence:
     storage: 50Mi
     storageClassName: rabbitmq-ops
-  replicas: 1
+  replicas: 3
   resources:
     requests:
-      cpu: 500m
-      memory: 500Mi
+      cpu: 100m
+      memory: 300Mi
     limits:
-      cpu: 1
+      cpu: 200m
       memory: 500Mi
   rabbitmq:
-          additionalConfig: |
-                  log.console.level = info
-                  channel_max = 1700
-                  default_user= guest 
-                  default_pass = guest
-                  default_user_tags.administrator = true
+    additionalPlugins: 
+      - rabbitmq_web_stomp
+    additionalConfig: |
+            log.console.level = info
+            channel_max = 1700
+            default_user= guest 
+            default_pass = guest
+            default_user_tags.administrator = true
   service:
     type: LoadBalancer

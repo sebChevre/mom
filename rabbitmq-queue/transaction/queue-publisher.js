@@ -36,10 +36,13 @@ MessageProducer.prototype.sendMessage = function sendMessage(messageToPublish, q
     this.channel.assertQueue(queueToPublish, {
       durable: false
     });
+    this.channel.confirmSelect();
 
     
     this.channel.sendToQueue(queueToPublish, Buffer.from(messageToPublish));
+    //this.channel.commitTransaction();
      console.log(`[PUBLISHER] >> Message published on queue : ${queueToPublish}, message: ${messageToPublish}]`);
+
   }catch (e) {
     console.log(e)
   }

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.six-interbank-clearing.com/de/pain.001.001.03.ch.02.xsd">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>6da4cd067b21497e84fce19f2c8376be</MsgId>
+      <CreDtTm>2021-09-17T14:15:52.3171034+02:00</CreDtTm>
+      <NbOfTxs>7</NbOfTxs>
+      <CtrlSum>4625.00</CtrlSum>
+      <InitgPty>
+        <Nm>Diartis AG</Nm>
+        <CtctDtls>
+          <Nm>KiSS 4</Nm>
+          <Othr>5.4.28.513</Othr>
+        </CtctDtls>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>92904decce6d4b1fbe13c3087bd523e0</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <BtchBookg>true</BtchBookg>
+      <ReqdExctnDt>2021-09-24</ReqdExctnDt>
+      <Dbtr />
+      <DbtrAcct>
+        <Id>
+          <Othr>
+            <Id>CH75000789020107275118</Id>
+          </Othr>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <ClrSysMmbId>
+            <ClrSysId>
+              <Cd>CHBCC</Cd>
+            </ClrSysId>
+            <MmbId>789</MmbId>
+          </ClrSysMmbId>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>6002029</InstrId>
+          <EndToEndId>6002029</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="CHF">800.00</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <ClrSysId>
+                <Cd>CHBCC</Cd>
+              </ClrSysId>
+              <MmbId>768</MmbId>
+            </ClrSysMmbId>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Dupont, Marie</Nm>
+          <PstlAdr />
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>CH9000768300117679910</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Dupont, Max</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>6002031</InstrId>
+          <EndToEndId>6002031</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="CHF">631.00</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <ClrSysId>
+                <Cd>CHBCC</Cd>
+              </ClrSysId>
+              <MmbId>6300</MmbId>
+            </ClrSysMmbId>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Messerli sylvie</Nm>
+          <PstlAdr />
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>CH2506300016170027906</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Messerli, Kayla</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>6002055</InstrId>
+          <EndToEndId>6002055</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="CHF">847.00</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <ClrSysId>
+                <Cd>CHBCC</Cd>
+              </ClrSysId>
+              <MmbId>226</MmbId>
+            </ClrSysMmbId>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Barreiro Blanchard, Lola</Nm>
+          <PstlAdr>
+            <StrtNm>Rue des Perriers </StrtNm>
+            <PstCd>2900</PstCd>
+            <TwnNm>Porrentruy</TwnNm>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>CH640022622610246840B</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Barreiro, Aaron</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>6002058</InstrId>
+          <EndToEndId>6002058</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="CHF">847.00</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <ClrSysId>
+                <Cd>CHBCC</Cd>
+              </ClrSysId>
+              <MmbId>226</MmbId>
+            </ClrSysMmbId>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Barreiro Blanchard, Lola</Nm>
+          <PstlAdr>
+            <StrtNm>Rue des Perriers </StrtNm>
+            <PstCd>2900</PstCd>
+            <TwnNm>Porrentruy</TwnNm>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>CH640022622610246840B</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Barreiro, Elie</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>6002328</InstrId>
+          <EndToEndId>6002328</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="CHF">500.00</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <ClrSysId>
+                <Cd>CHBCC</Cd>
+              </ClrSysId>
+              <MmbId>80027</MmbId>
+            </ClrSysMmbId>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Souhail, Christine</Nm>
+          <PstlAdr>
+            <StrtNm>Sous la Côte </StrtNm>
+            <PstCd>2902</PstCd>
+            <TwnNm>Fontenais</TwnNm>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>CH3280027000003376833</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Souhail, Hicham</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>6002330</InstrId>
+          <EndToEndId>6002330</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="CHF">500.00</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <ClrSysId>
+                <Cd>CHBCC</Cd>
+              </ClrSysId>
+              <MmbId>80027</MmbId>
+            </ClrSysMmbId>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Souhail, Christine</Nm>
+          <PstlAdr>
+            <StrtNm>Sous la Côte </StrtNm>
+            <PstCd>2902</PstCd>
+            <TwnNm>Fontenais</TwnNm>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>CH3280027000003376833</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Souhail, Marwane</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>6002332</InstrId>
+          <EndToEndId>6002332</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="CHF">500.00</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <ClrSysId>
+                <Cd>CHBCC</Cd>
+              </ClrSysId>
+              <MmbId>80027</MmbId>
+            </ClrSysMmbId>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Souhail, Christine</Nm>
+          <PstlAdr>
+            <StrtNm>Sous la Côte </StrtNm>
+            <PstCd>2902</PstCd>
+            <TwnNm>Fontenais</TwnNm>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>CH3280027000003376833</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Souhail, Sara</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>

@@ -1,5 +1,5 @@
 'use strict';
-require ('custom-env').env('k8s')
+require('dotenv').config();
 
 var amqp = require('amqplib/callback_api');
 const port = process.env.RABBITMQ_PORT
@@ -34,11 +34,19 @@ amqp.connect(rabbitMqConnextionString, function(error0, connection) {
         }
 
         channel.assertQueue(queueToSubscribe, {
-            durable: true
+            durable: false
         });
 
         channel.consume(queueToSubscribe, function(msg) {
+            var secs = msg.content.toString().split('.').length - 1;
+            var duration = secs * 1000;
+
             console.log(`[SUBSCRIBER] >> Message received [queue:${queueToSubscribe}] - ${msg.content.toString()}`)
+            console.log(`[SUBSCRIBER] >> Starting long task, duration: ${duration} ms`)
+            setTimeout(function() {
+                console.log(`[SUBSCRIBER] >> Task Done`)
+                
+              }, duration);
         }, {
             noAck: true
         });

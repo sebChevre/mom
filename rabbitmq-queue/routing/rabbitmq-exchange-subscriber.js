@@ -13,7 +13,7 @@ var query = require('cli-interact').question;
 
 const args = process.argv;
 var exchangeToSubscribe = args[2]
-var eventsToSubscribe =  process.argv.slice(3);
+var eventsToSubscribe =  args[3]
 
 if(exchangeToSubscribe === undefined) {
   console.log("You have to pass the queue name as function argument")
